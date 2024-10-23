@@ -1,0 +1,9 @@
+openai==0.28
+transformers 
+transformers
+scikit-learn
+PyPDF2
+pytesseract
+python-docx
+tesseract
+flask
