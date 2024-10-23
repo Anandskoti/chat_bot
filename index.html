@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        button {
+            margin-top: 10px;
+        }
+        .response {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <form method="POST" action="/chat">
+        <textarea name="user_input" placeholder="Type your message here..."></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if user_input and assistant_response %}
+    <div class="response">
+        <strong>You:</strong> {{ user_input}}<br>
+        <strong>AI:</strong> {{ assistant_response }}
+    </div>
+    {% endif %}
+</body>
+</html>
